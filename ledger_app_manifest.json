@@ -1,0 +1,55 @@
+{
+	"apps_version": "1.0.1",
+	"apps_build_path": "app",
+	"language": "C",
+	"variant_param": "COIN",
+	"variants": {
+		"ACA": {
+			"name": "Acala",
+			"curve": ["ed25519"],
+			"path": ["44'/787'", "44'/354'"],
+			"devices": {
+				"nanos": {
+					"flags": [],
+					"icon": "nanos_icon.gif"
+				},
+				"nanox": {
+					"flags": ["APPLICATION_FLAG_BOLOS_SETTINGS"],
+					"icon": "nanox_icon.gif"
+				},
+				"nanosp": {
+					"flags": [],
+					"icon": "nanox_icon.gif"
+				}
+			},
+			"settings": [
+				"ENABLE_BLUETOOTH"
+			],
+			"src_folders": [
+				"app/src",
+				"deps/ledger-zxlib/src",
+				"deps/ledger-zxlib/app/common",
+				"deps/ledger-zxlib/app/ui"
+			]
+		},
+		"ACA_XL": {
+			"name": "Acala XL",
+			"curve": ["ed25519"],
+			"path": ["44'/787'", "44'/354'"],
+			"devices": {
+				"nanos": {
+					"flags": [],
+					"icon": "nanos_icon.gif"
+				}
+			},
+			"settings": [],
+			"src_folders": [
+				"app/src",
+				"app/rust/include",
+				"deps/ledger-zxlib/src",
+				"deps/ledger-zxlib/app/common",
+				"deps/ledger-zxlib/app/ui"
+			]
+		}
+	}
+}
